@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="icon" href="https://i.ibb.co/F57MGN0/ai-1.png" type="image/png">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- my adds for the head -->
+     <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+<!-- bootstrap core css -->
+<link rel="stylesheet" type="text/css" href="css1/bootstrap.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<!-- fonts style -->
+<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap"
+  rel="stylesheet" />
+<!-- Custom styles for this template -->
+<link href="css1/style.css" rel="stylesheet" />
+<!-- responsive style -->
+<link href="css1/responsive.css" rel="stylesheet" />
+</head>
+<style>
+#send{
+  ackground: red;
+  
+}
+#send:hover{
+  background: blue;
+}
+</style>
+<script>
+  window.onload = function() {
+      // Reset the form fields when the page loads
+      document.getElementById("form").reset();
+  };
+</script>
+</head>
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section" style="background-color: rgb(47, 72, 119);">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.php">
+            <img src="images1/lg1.png" alt="" />
+            <span>
+              K<b style="font-size: small;">s</b>TU  I.C.T DIRECTORATE
+            </span>
+          </a>
+          <div class="contact_nav" id="">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.php">
+                <img src="images1/location.png" alt="" />
+                  <span>KsTU MP BLOCK</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.php">
+                  <img src="images1/call.png" alt="" />
+                  <span>Call : 000000000000</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.php">
+                 <img src="images1/envelope.png" alt="" />
+                  <span>info@kstu.edu.gh</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="container">
+        <div class="custom_nav2">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex  flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="http://localhost/final_mini_project/onlineproject/index.php">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:1800/wifiConnection">Wifi Assistance</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="about.html">About </a>
+                  </li> -->
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="service.html">Services </a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:1800/portalConnection">Portal Assistance</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:1800/index.html">General Assistance</a>
+                  </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="slider_container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" id="comeup" >
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row" >
+                  <div class="col-lg- col-md- offset-md- offset-md-">
+                    <!-- <div class="detail-box" style="border: 1px solid green;"></div> -->
+
+
+<div class="container" style="order: 1px solid red;
+                              background-color: #1b2234;
+                              border-radius: 6px;
+                              margin-top: 10px;
+                              ">
+
+    <!-- Header -->
+    <div class="header" style="order: 3px solid red;">
+      <h5>KsTU General Chatbot</h5>
+      <img src="https://i.ibb.co/F57MGN0/ai-1.png" style="height: 30px;" alt="Chatbot Logo">
+  </div>
+
+  <!-- Chat Container -->
+  <div id="chatContainer" class="container" style="height: 250px;
+                                                   border: 1px solid white;
+                                                   border-radius: 15px 0 15px 0;
+                                                   background-color: #060b14;
+                                                   overflow-y: auto; 
+                                                    order: 1px solid #ccc;
+                                                    width: 100%;
+                                                   ">
+    <!-- displays chat message content -->
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <input type="text" id="text" placeholder="Ask me anything" autocomplete="off" required>
+    <input type="file" id="fileInput" style="display: none;" accept="image/*">
+    <button id="attachment">
+        <i class="fas fa-paperclip"></i>
+    </button>
+    <button id="send">
+      <i class="fas fa-location-arrow"></i>
+    </button>
+  </div>
+
+</div>
+  
+
+
+
+    
+
+
+  </div>
+  <!-- </div> -->
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+<!-- end slider section -->
+</div>
+
+<!-- info section -->
+
+<section class="info_section layout_padding2-top" style="margin-top:px;">
+<div class="container" style="">
+<div class="info_form">
+<h4>
+Email I.C.T Directorate
+</h4>
+<form action="https://api.web3forms.com/submit" method="POST" >
+<input type="hidden" name="access_key" value="f4e0391a-4265-4268-bb97-2954a42b0166" />
+<input type="hidden" name="subject" value="Coming from KsTU Discrip page" />
+<input type="hidden" name="redirect" value="https://web3forms.com/success" />
+<input type="checkbox" name="botcheck" id="" style="display: none;" />
+<!-- <input type="text" name="name" placeholder="Say Something About KsTU I.C.T Help Desk Page"> -->
+<input type="text" name="name" id="name" placeholder="" required />
+<div class="d-flex justify-content-end">
+<button>
+Send 
+</button>
+</div>
+</form>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<h6>
+About KsTU
+</h6>
+<p>
+Proactive means and solutions r User First approach solutions
+Clear and Simple Communication
+Stay secure (cyber security)
+Evolving staff knowledge base professional training and development for society
+</p>
+</div>
+<div class="col-md-2 offset-md-1">
+<h6>
+Menus
+</h6>
+<ul>
+<li class=" active">
+<a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+</li>
+<li class="">
+<a class="" href="about.html">About </a>
+</li>
+<li class="">
+<a class="" href="service.html">Services </a>
+</li>
+<li class="">
+<a class="" href="#contactSection">Contact Us</a>
+</li>
+<li class="">
+<a class="" href="#">Login</a>
+</li>
+</ul>
+</div>
+<div class="col-md-3">
+<!-- <h6>
+Useful Email Us
+</h6> -->
+<!--  Email from -->
+<form action="https://api.web3forms.com/submit" method="POST" id="form">
+<fieldset>
+<legend>Contact Form</legend>
+<input type="hidden" name="access_key" value="f4e0391a-4265-4268-bb97-2954a42b0166" />
+<input type="hidden" name="subject" value="New Submission" />
+<input type="hidden" name="redirect" value="https://web3forms.com/success" />
+<input type="checkbox" name="botcheck" id="" style="display: none;" />
+<div>
+<label for="name">Full Name</label><br>
+<input type="text" name="name" id="name" placeholder="" required />
+<br><br>
+</div>
+<div>
+<label for="email">Email Address</label><br>
+<input type="email" name="email" id="email" placeholder="" required /><br><br>
+</div>
+<!-- <div>
+<label for="phone">Phone Number</label>
+<br>
+<input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required /><br><br>
+</div> -->
+<div>
+<label for="message">Your Message</label>
+<br>
+<textarea rows="5" name="message" id="message" placeholder="Your Message" required style="height: 50px; width: 80%"></textarea><br><br>
+</div>
+
+<button  type="submit" id="send"> Send Message </button>
+</fieldset>
+</form>
+</div>
+<div class="col-md-3">
+<h6>
+Contact Us
+</h6>
+<div class="info_link-box">
+<a href="">
+<img src="images1/location-white.png" alt="">
+<span> KsTU MP BLOCK BASEMENT</span>
+</a>
+<a href="">
+<img src="images1/call-white.png" alt="">
+<span>+0000000</span>
+</a>
+<a href="">
+<img src="images1/mail-white.png" alt="">
+<span> info@kstu.edu.gh</span>
+</a>
+</div>
+<div class="info_social">
+<div>
+<a href="">
+<img src="images1/facebook-logo-button.png" alt="">
+</a>
+</div>
+<div>
+<a href="">
+<img src="images1/twitter-logo-button.png" alt="">
+</a>
+</div>
+<div>
+<a href="">
+<img src="images1/linkedin.png" alt="">
+</a>
+</div>
+<div>
+<a href="">
+<img src="images1/instagram.png" alt="">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- end info section -->
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+<script type="text/javascript" src="js1/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js1/bootstrap.js"></script>
+
+<script>
+function openNav() {
+document.getElementById("myNav").classList.toggle("menu_width");
+document
+.querySelector(".custom_menu-btn")
+.classList.toggle("menu_btn-style");
+}
+</script>
+</body>
+<head>
+<style>
+
+</style>
+</head>
+</html>
