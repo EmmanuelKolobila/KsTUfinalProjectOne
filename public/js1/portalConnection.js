@@ -17,6 +17,7 @@ const commands = [
   { input: "help me", response: "Sure! What do you need help with regarding your KsTU Portal?" },
   { input: "how to reset my password", response: "To reset your portal password, please visit the official KsTU portal reset page or contact the ICT Directorate for assistance." },
   { input: "okay", response: "Okay! If you have any portal-related questions, feel free to ask!" },
+  { input: "thanks", response: "An glade to hear! If you have any portal-related questions, feel free to ask!" },
   { input: "hello", response: "Hello! How can I assist you today? Is it about your KsTU Portal access? Feel free to ask!" },
   { input: "what is your name", response: "I am the KsTU Portal Assistant. You can call me your KsTU Portal Buddy!" },
   { input: "how to login to portal", response: "To login to the KsTU portal, go to the official portal website, enter your student ID and password, then click on the login button." },
@@ -53,7 +54,9 @@ const commands = [
   { input: "how do I know if my registration was successful?", response: "Check the course registration summary on the portal or look for the 'Proof of Registration' page." },
   { input: "can I access the portal on mobile?", response: "Yes, the portal is mobile-friendly. Just open it using your mobile browser." },
   { input: "what should I do if the portal is not opening?", response: "Check your internet connection. If the issue persists, try a different browser or contact ICT." },
-  { input: "how do I upload my passport photo to the portal?", response: "Go to your profile section on the portal and look for an option to upload or update your photo." }
+  { input: "how do I upload my passport photo to the portal?", response: "Go to your profile section on the portal and look for an option to upload or update your photo." },
+  {input: "the processs is not working", response: "Please visit the ICT directorate for assistance"},
+  {input: "ICT directorate location", response: "You will find the ICT directorate at the basement of the MP Block KsTU near the sport complex"},
 ];
 
  
@@ -105,5 +108,23 @@ sendBtn.addEventListener("click", function () {
     textbox.value = ""; 
     sendMessage(user.message);
     chatboxRespond(user.message);
+  }
+});
+// finction that handels the enter key event
+// to send the message when the enter key is pressed
+textbox.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Prevents newline in input field
+
+    var userMessage = textbox.value;
+
+    if (userMessage.trim() === "") {
+      alert("Please enter a message!");
+    } else {
+      user.message = userMessage.trim();
+      textbox.value = ""; // Clear textbox
+      sendMessage(user.message);
+      chatboxRespond(user.message);
+    }
   }
 });

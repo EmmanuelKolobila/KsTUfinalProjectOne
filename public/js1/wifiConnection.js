@@ -41,7 +41,9 @@ const commands = [
    { input: "how strong should my new password be?", response: "Use at least 8 characters with a mix of letters, numbers, and symbols for better security." },
    { input: "what if I don’t have access to my student email?", response: "Visit the ICT office in person with a valid student ID for assistance." },
    { input: "is there a charge for resetting my student wifi password?", response: "No, it’s usually a free service provided to all active students." },
-   
+   {input: "the processs is not working", response: "Please visit the ICT directorate for assistance"},
+  {input: "ICT directorate location", response: "You will find the ICT directorate at the basement of the MP Block KsTU near the sport complex"},
+  { input: "how do I connect to the KsTU WiFi?", response: "To connect to the KsTU WiFi, go to your device's WiFi settings, select the KsTU network, and enter the password provided by the university." },
    
    { input: "how can I get help with wifi issues?", response: "If you encounter Wi-Fi issues, you can reach out to the ICT Directorate for support, or check if there are any service interruptions on the university website." },
    { input: "why can't I connect to the wifi?", response: "Check if you're entering the correct password, ensure your device is compatible, or contact ICT if there’s a problem with your account." },
@@ -106,5 +108,23 @@ sendBtn.addEventListener("click", function () {
     textbox.value = ""; // Clear textbox
     sendMessage(user.message);
     chatboxRespond(user.message);
+  }
+});
+// function that handles the enter key event
+// to send the message when the enter key is pressed
+textbox.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Prevents newline in input field
+
+    var userMessage = textbox.value;
+
+    if (userMessage.trim() === "") {
+      alert("Please enter a message!");
+    } else {
+      user.message = userMessage.trim();
+      textbox.value = ""; // Clear textbox
+      sendMessage(user.message);
+      chatboxRespond(user.message);
+    }
   }
 });
